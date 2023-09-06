@@ -2,13 +2,14 @@ package build
 
 import (
 	"errors"
-	buildutils "github.com/jfrog/build-info-go/build/utils"
 	"path/filepath"
 	"reflect"
 	"testing"
 
-	"github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
+	buildutils "github.com/frlute/build-info-go/build/utils"
+
+	"github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
 	"github.com/jfrog/gofrog/parallel"
 	"github.com/stretchr/testify/assert"
 )

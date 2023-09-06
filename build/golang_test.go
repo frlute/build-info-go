@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/jfrog/build-info-go/entities"
+	"github.com/frlute/build-info-go/entities"
 	"github.com/stretchr/testify/assert"
 )
 

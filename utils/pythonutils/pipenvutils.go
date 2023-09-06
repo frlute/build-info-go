@@ -2,7 +2,8 @@ package pythonutils
 
 import (
 	"encoding/json"
-	"github.com/jfrog/build-info-go/utils"
+
+	"github.com/frlute/build-info-go/utils"
 )
 
 // Executes pipenv graph.

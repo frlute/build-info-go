@@ -3,13 +3,14 @@ package build
 import (
 	"errors"
 	"fmt"
-	buildutils "github.com/jfrog/build-info-go/build/utils"
-	"github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
-	"github.com/jfrog/gofrog/version"
-	"golang.org/x/exp/slices"
 	"os"
 	"os/exec"
+
+	buildutils "github.com/frlute/build-info-go/build/utils"
+	"github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
+	"github.com/jfrog/gofrog/version"
+	"golang.org/x/exp/slices"
 )
 
 const minSupportedYarnVersion = "2.4.0"
@@ -91,7 +92,8 @@ func (ym *YarnModule) getDependenciesMap() (map[string]*entities.Dependency, err
 }
 
 func (ym *YarnModule) appendDependencyRecursively(yarnDependency *buildutils.YarnDependency, pathToRoot []string, yarnDependenciesMap map[string]*buildutils.YarnDependency,
-	buildInfoDependencies map[string]*entities.Dependency) error {
+	buildInfoDependencies map[string]*entities.Dependency,
+) error {
 	id := yarnDependency.Name() + ":" + yarnDependency.Details.Version
 
 	// To avoid infinite loops in case of circular dependencies, the dependency won't be added if it's already in pathToRoot

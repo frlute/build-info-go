@@ -5,14 +5,15 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
-	"github.com/jfrog/gofrog/parallel"
-	"github.com/jfrog/gofrog/version"
-	"golang.org/x/exp/maps"
 	"os/exec"
 	"strings"
 	"sync"
+
+	"github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
+	"github.com/jfrog/gofrog/parallel"
+	"github.com/jfrog/gofrog/version"
+	"golang.org/x/exp/maps"
 )
 
 const yarnV2Version = "2.0.0"

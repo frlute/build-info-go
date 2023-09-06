@@ -1,13 +1,14 @@
 package utils
 
 import (
-	"github.com/jfrog/build-info-go/utils"
-	"github.com/stretchr/testify/assert"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"github.com/frlute/build-info-go/utils"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGetYarnDependencyKeyFromLocator(t *testing.T) {
@@ -58,7 +59,7 @@ func checkGetYarnDependenciesUninstalled(t *testing.T, versionToSet string) {
 
 	// Deleting yarn.lock content to make imitate the reverse action of 'yarn install'
 	lockFilePath := filepath.Join(projectSrcPath, "yarn.lock")
-	yarnLockFile, err := os.OpenFile(lockFilePath, os.O_WRONLY, 0666)
+	yarnLockFile, err := os.OpenFile(lockFilePath, os.O_WRONLY, 0o666)
 	assert.NoError(t, err, "Could not open yarn.lock file")
 	defer func() {
 		assert.NoError(t, yarnLockFile.Close())

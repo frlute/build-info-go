@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/jfrog/build-info-go/build/testdata"
-	buildutils "github.com/jfrog/build-info-go/build/utils"
-	"github.com/jfrog/build-info-go/utils"
+	"github.com/frlute/build-info-go/build/testdata"
+	buildutils "github.com/frlute/build-info-go/build/utils"
+	"github.com/frlute/build-info-go/utils"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/xeipuuv/gojsonschema"

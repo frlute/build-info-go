@@ -1,11 +1,12 @@
 package main
 
 import (
-	"github.com/jfrog/build-info-go/utils"
 	"os"
 	"path"
 	"path/filepath"
 	"strings"
+
+	"github.com/frlute/build-info-go/utils"
 )
 
 const (

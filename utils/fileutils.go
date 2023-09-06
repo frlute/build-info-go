@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
-	"golang.org/x/exp/slices"
 	"io"
 	"net/http"
 	"os"
@@ -14,7 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jfrog/build-info-go/entities"
+	"golang.org/x/exp/slices"
+
+	"github.com/frlute/build-info-go/entities"
 )
 
 const (
@@ -502,7 +503,7 @@ func GetFileAndDirFromPath(path string) (fileName, dir string) {
 
 func CreateFilePath(localPath, fileName string) (string, error) {
 	if localPath != "" {
-		err := os.MkdirAll(localPath, 0777)
+		err := os.MkdirAll(localPath, 0o777)
 		if err != nil {
 			return "", err
 		}

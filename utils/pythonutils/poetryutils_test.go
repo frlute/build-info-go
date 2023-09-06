@@ -6,7 +6,7 @@ import (
 	"sort"
 	"testing"
 
-	testdatautils "github.com/jfrog/build-info-go/build/testdata"
+	testdatautils "github.com/frlute/build-info-go/build/testdata"
 	"github.com/stretchr/testify/assert"
 )
 

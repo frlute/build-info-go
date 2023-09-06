@@ -12,7 +12,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/jfrog/build-info-go/utils"
+	"github.com/frlute/build-info-go/utils"
 	"github.com/jfrog/gofrog/version"
 )
 
@@ -215,13 +215,13 @@ func getInitScript(initScriptPattern, gradleDependenciesDir, gradlePluginFilenam
 	gradlePluginPath = strings.ReplaceAll(gradlePluginPath, "\\", "\\\\")
 	initScriptContent := strings.ReplaceAll(initScriptPattern, "${pluginLibDir}", gradlePluginPath)
 	if !utils.IsPathExists(gradleDependenciesDir) {
-		err = os.MkdirAll(gradleDependenciesDir, 0777)
+		err = os.MkdirAll(gradleDependenciesDir, 0o777)
 		if err != nil {
 			return "", err
 		}
 	}
 
-	return initScriptPath, os.WriteFile(initScriptPath, []byte(initScriptContent), 0644)
+	return initScriptPath, os.WriteFile(initScriptPath, []byte(initScriptContent), 0o644)
 }
 
 func GetGradleExecPath(useWrapper bool) (string, error) {

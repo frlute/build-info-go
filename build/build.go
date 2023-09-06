@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jfrog/build-info-go/utils/pythonutils"
+	"github.com/frlute/build-info-go/utils/pythonutils"
 
-	"github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
+	"github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
 )
 
 const (

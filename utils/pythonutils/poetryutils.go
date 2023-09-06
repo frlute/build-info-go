@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"github.com/BurntSushi/toml"
-	"github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
+	"github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
 	gofrogcmd "github.com/jfrog/gofrog/io"
 	"golang.org/x/exp/maps"
 )
@@ -174,6 +174,7 @@ func extractPoetryDependenciesFiles(srcPath string, cmdArgs []string, log utils.
 	}
 	return
 }
+
 func getSitePackagesPath(commandArgs []string, srcPath string) (sitePackagesPath string, err error) {
 	// First run poetry install with verbose logging
 	commandArgs = append(commandArgs, "-vv")

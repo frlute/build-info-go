@@ -1,8 +1,9 @@
 package utils
 
 import (
-	"github.com/jfrog/build-info-go/utils/compareutils"
 	"testing"
+
+	"github.com/frlute/build-info-go/utils/compareutils"
 
 	"github.com/stretchr/testify/assert"
 )

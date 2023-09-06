@@ -3,13 +3,14 @@ package dependencies
 import (
 	"encoding/xml"
 	"fmt"
-	"github.com/jfrog/build-info-go/utils"
 	"os"
 	"path/filepath"
 	"strings"
 
-	"github.com/jfrog/build-info-go/build/utils/dotnet"
-	buildinfo "github.com/jfrog/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
+
+	"github.com/frlute/build-info-go/build/utils/dotnet"
+	buildinfo "github.com/frlute/build-info-go/entities"
 	gofrogcmd "github.com/jfrog/gofrog/io"
 )
 
@@ -197,7 +198,6 @@ func createNugetPackage(packagesPath string, nuget xmlPackage, nPackage *nugetPa
 	nupkgPath := filepath.Join(packagesPath, nPackage.id, nPackage.version, strings.Join([]string{nPackage.id, nPackage.version, "nupkg"}, "."))
 
 	exists, err := utils.IsFileExists(nupkgPath, false)
-
 	if err != nil {
 		return nil, err
 	}

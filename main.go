@@ -3,15 +3,17 @@ package main
 import (
 	"os"
 
-	"github.com/jfrog/build-info-go/cli"
-	"github.com/jfrog/build-info-go/utils"
+	"github.com/frlute/build-info-go/cli"
+	"github.com/frlute/build-info-go/utils"
 	clitool "github.com/urfave/cli/v2"
 )
 
 const logLevelEnv = "BUILD_INFO_LOG_LEVEL"
 
-var log utils.Log
-var cliVersion = "dev"
+var (
+	log        utils.Log
+	cliVersion = "dev"
+)
 
 func main() {
 	log = utils.NewDefaultLogger(getCliLogLevel())

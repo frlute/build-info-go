@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/jfrog/build-info-go/utils"
+	"github.com/frlute/build-info-go/utils"
 	"github.com/jfrog/gofrog/version"
 	"github.com/stretchr/testify/assert"
 )

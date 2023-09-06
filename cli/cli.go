@@ -9,10 +9,10 @@ import (
 	"os/exec"
 	"strings"
 
+	"github.com/frlute/build-info-go/build"
+	"github.com/frlute/build-info-go/utils"
+	"github.com/frlute/build-info-go/utils/pythonutils"
 	cdx "github.com/frlute/cyclonedx-go"
-	"github.com/jfrog/build-info-go/build"
-	"github.com/jfrog/build-info-go/utils"
-	"github.com/jfrog/build-info-go/utils/pythonutils"
 	clitool "github.com/urfave/cli/v2"
 )
 

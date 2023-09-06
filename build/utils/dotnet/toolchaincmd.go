@@ -1,10 +1,11 @@
 package dotnet
 
 import (
-	"github.com/jfrog/build-info-go/utils"
 	"io"
 	"os/exec"
 	"strings"
+
+	"github.com/frlute/build-info-go/utils"
 )
 
 type ToolchainType int

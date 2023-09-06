@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"time"
 
-	buildinfo "github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
+	buildinfo "github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
 )
 
 const BuildsTempPath = "jfrog/builds/"
@@ -72,5 +72,5 @@ func saveBuildGeneralDetails(buildName, buildNumber, projectKey, buildsDirPath s
 	if err != nil {
 		return err
 	}
-	return os.WriteFile(detailsFilePath, content.Bytes(), 0600)
+	return os.WriteFile(detailsFilePath, content.Bytes(), 0o600)
 }

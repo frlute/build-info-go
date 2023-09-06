@@ -2,7 +2,7 @@ resources:
   - name: buildinfoGoGit
     type: GitRepo
     configuration:
-      path: jfrog/build-info-go
+      path: frlute/build-info-go
       branches:
         include: dev
       gitProvider: il_automation
@@ -46,7 +46,7 @@ pipelines:
 
             # Configure Git and merge from the dev
             - git checkout main
-            - git remote set-url origin https://$int_il_automation_token@github.com/jfrog/build-info-go.git
+            - git remote set-url origin https://$int_il_automation_token@github.com/frlute/build-info-go.git
             - git merge origin/dev
 
             # Download JFrog CLI

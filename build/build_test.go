@@ -1,10 +1,11 @@
 package build
 
 import (
-	"github.com/jfrog/build-info-go/entities"
-	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"
+
+	"github.com/frlute/build-info-go/entities"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestCollectEnv(t *testing.T) {

@@ -2,11 +2,12 @@ package dependencies
 
 import (
 	"encoding/json"
-	"github.com/jfrog/build-info-go/utils"
-	"github.com/stretchr/testify/assert"
 	"path/filepath"
 	"reflect"
 	"testing"
+
+	"github.com/frlute/build-info-go/utils"
+	"github.com/stretchr/testify/assert"
 )
 
 var logger = utils.NewDefaultLogger(utils.INFO)
@@ -72,9 +73,12 @@ func TestJson(t *testing.T) {
 			"dep1/1.0.1": {Type: "project", Path: "dep1/path/1.0.1", Files: []string{"file1", "file2"}},
 			"dep2/1.0.2": {Path: "dep2/path/1.0.2", Files: []string{"file1", "file2"}},
 		},
-		Project: project{Version: "1.0.0", Restore: restore{PackagesPath: "path/to/packages"},
+		Project: project{
+			Version: "1.0.0", Restore: restore{PackagesPath: "path/to/packages"},
 			Frameworks: map[string]framework{"net461": {
-				Dependencies: map[string]dependency{"dep1": {Target: "Package", Version: "[1.0.1, )"}}}}},
+				Dependencies: map[string]dependency{"dep1": {Target: "Package", Version: "[1.0.1, )"}},
+			}},
+		},
 	}
 
 	if !reflect.DeepEqual(expected, assetsObj) {

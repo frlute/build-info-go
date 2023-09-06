@@ -7,8 +7,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
+	"github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
 	"github.com/jfrog/gofrog/version"
 	"github.com/stretchr/testify/assert"
 )
@@ -58,7 +58,7 @@ func CreateNpmTest(t *testing.T, testdataPath, projectDirName string, withOsInPa
 			npmVersionDir = filepath.Join(npmVersionDir, "linux")
 
 		default:
-			//MacOs
+			// MacOs
 			npmVersionDir = filepath.Join(npmVersionDir, "macos")
 		}
 	}

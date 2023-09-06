@@ -1,13 +1,14 @@
 package build
 
 import (
-	"github.com/jfrog/build-info-go/build/utils/dotnet"
-	"github.com/jfrog/build-info-go/build/utils/dotnet/solution"
-	"github.com/jfrog/build-info-go/utils"
-	"github.com/jfrog/gofrog/io"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/frlute/build-info-go/build/utils/dotnet"
+	"github.com/frlute/build-info-go/build/utils/dotnet/solution"
+	"github.com/frlute/build-info-go/utils"
+	"github.com/jfrog/gofrog/io"
 )
 
 type DotnetModule struct {

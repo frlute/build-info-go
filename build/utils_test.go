@@ -1,10 +1,11 @@
 package build
 
 import (
-	"github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
+	"github.com/stretchr/testify/assert"
 )
 
 func validateModule(t *testing.T, module entities.Module, expectedDependencies, expectedArtifacts int, moduleName string, moduleType entities.ModuleType, depsContainChecksums bool) {

@@ -11,7 +11,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/jfrog/build-info-go/utils"
+	"github.com/frlute/build-info-go/utils"
 )
 
 const (
@@ -296,7 +296,7 @@ func createClassworldsConfig(dependenciesPath string) error {
 	if utils.IsPathExists(classworldsPath) {
 		return nil
 	}
-	return os.WriteFile(classworldsPath, []byte(ClassworldsConf), 0644)
+	return os.WriteFile(classworldsPath, []byte(ClassworldsConf), 0o644)
 }
 
 func (config *mvnRunConfig) GetCmd() *exec.Cmd {

@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"testing"
 
-	testdatautils "github.com/jfrog/build-info-go/build/testdata"
-	"github.com/jfrog/build-info-go/utils"
+	testdatautils "github.com/frlute/build-info-go/build/testdata"
+	"github.com/frlute/build-info-go/utils"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -24,10 +24,14 @@ func TestReadPackageInfoFromPackageJson(t *testing.T) {
 		json string
 		pi   *PackageInfo
 	}{
-		{`{ "name": "build-info-go-tests", "version": "1.0.0", "description": "test package"}`,
-			&PackageInfo{Name: "build-info-go-tests", Version: "1.0.0", Scope: ""}},
-		{`{ "name": "@jfrog/build-info-go-tests", "version": "1.0.0", "description": "test package"}`,
-			&PackageInfo{Name: "build-info-go-tests", Version: "1.0.0", Scope: "@jfrog"}},
+		{
+			`{ "name": "build-info-go-tests", "version": "1.0.0", "description": "test package"}`,
+			&PackageInfo{Name: "build-info-go-tests", Version: "1.0.0", Scope: ""},
+		},
+		{
+			`{ "name": "@frlute/build-info-go-tests", "version": "1.0.0", "description": "test package"}`,
+			&PackageInfo{Name: "build-info-go-tests", Version: "1.0.0", Scope: "@jfrog"},
+		},
 	}
 	for _, test := range tests {
 		t.Run(test.json, func(t *testing.T) {
@@ -50,7 +54,7 @@ func TestGetDeployPath(t *testing.T) {
 		pi           *PackageInfo
 	}{
 		{`build-info-go-tests/-/build-info-go-tests-1.0.0.tgz`, &PackageInfo{Name: "build-info-go-tests", Version: "1.0.0", Scope: ""}},
-		{`@jfrog/build-info-go-tests/-/build-info-go-tests-1.0.0.tgz`, &PackageInfo{Name: "build-info-go-tests", Version: "1.0.0", Scope: "@jfrog"}},
+		{`@frlute/build-info-go-tests/-/build-info-go-tests-1.0.0.tgz`, &PackageInfo{Name: "build-info-go-tests", Version: "1.0.0", Scope: "@jfrog"}},
 	}
 	for _, test := range tests {
 		t.Run(test.expectedPath, func(t *testing.T) {
@@ -114,7 +118,7 @@ func TestParseDependencies(t *testing.T) {
 }
 
 func TestAppendScopes(t *testing.T) {
-	var scopes = []struct {
+	scopes := []struct {
 		a        []string
 		b        []string
 		expected []string

@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	buildinfo "github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
 	"os"
 	"path/filepath"
 	"strings"
+
+	buildinfo "github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
 )
 
 const (

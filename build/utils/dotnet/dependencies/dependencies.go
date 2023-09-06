@@ -2,9 +2,10 @@ package dependencies
 
 import (
 	"fmt"
-	deptree "github.com/jfrog/build-info-go/build/utils/dotnet/dependenciestree"
-	buildinfo "github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
+
+	deptree "github.com/frlute/build-info-go/build/utils/dotnet/dependenciestree"
+	buildinfo "github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
 )
 
 const absentNupkgWarnMsg = " Skipping adding this dependency to the build info. This might be because the package already exists in a different NuGet cache," +

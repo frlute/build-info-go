@@ -2,9 +2,10 @@ package project
 
 import (
 	"encoding/json"
-	"github.com/jfrog/build-info-go/build/utils/dotnet/dependencies"
-	"github.com/jfrog/build-info-go/build/utils/dotnet/dependenciestree"
-	"github.com/jfrog/build-info-go/utils"
+
+	"github.com/frlute/build-info-go/build/utils/dotnet/dependencies"
+	"github.com/frlute/build-info-go/build/utils/dotnet/dependenciestree"
+	"github.com/frlute/build-info-go/utils"
 )
 
 type Project interface {

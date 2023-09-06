@@ -9,10 +9,10 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/jfrog/build-info-go/build/utils/dotnet/dependencies"
-	"github.com/jfrog/build-info-go/build/utils/dotnet/solution/project"
-	buildinfo "github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
+	"github.com/frlute/build-info-go/build/utils/dotnet/dependencies"
+	"github.com/frlute/build-info-go/build/utils/dotnet/solution/project"
+	buildinfo "github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
 	gofrog "github.com/jfrog/gofrog/io"
 )
 

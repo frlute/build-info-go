@@ -1,4 +1,4 @@
-module github.com/jfrog/build-info-go
+module github.com/frlute/build-info-go
 
 go 1.20
 

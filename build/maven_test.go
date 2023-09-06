@@ -4,12 +4,13 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	testdatautils "github.com/jfrog/build-info-go/build/testdata"
-	"github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
 	"os"
 	"path/filepath"
 	"testing"
+
+	testdatautils "github.com/frlute/build-info-go/build/testdata"
+	"github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
 
 	"github.com/stretchr/testify/assert"
 )

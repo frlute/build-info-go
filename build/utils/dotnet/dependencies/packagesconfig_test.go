@@ -2,13 +2,14 @@ package dependencies
 
 import (
 	"encoding/xml"
-	buildinfo "github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils"
-	"github.com/stretchr/testify/assert"
 	"path/filepath"
 	"reflect"
 	"sort"
 	"testing"
+
+	buildinfo "github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils"
+	"github.com/stretchr/testify/assert"
 )
 
 func getAllDependencies(dependencies map[string][]string) map[string]*buildinfo.Dependency {
@@ -121,16 +122,19 @@ func TestLoadNuspec(t *testing.T) {
 	expected := &nuspec{
 		XMLName: xml.Name{Local: "package"},
 		Metadata: metadata{
-			Dependencies: xmlDependencies{Groups: []group{{
-				TargetFramework: "targetFramework",
-				Dependencies: []xmlPackage{{
-					Id:      "one",
-					Version: "1.0.0",
-				}, {
-					Id:      "two",
-					Version: "2.0.0",
-				}}},
-			},
+			Dependencies: xmlDependencies{
+				Groups: []group{
+					{
+						TargetFramework: "targetFramework",
+						Dependencies: []xmlPackage{{
+							Id:      "one",
+							Version: "1.0.0",
+						}, {
+							Id:      "two",
+							Version: "2.0.0",
+						}},
+					},
+				},
 				Dependencies: []xmlPackage{{
 					Id:      "three",
 					Version: "3.0.0",
@@ -145,7 +149,7 @@ func TestLoadNuspec(t *testing.T) {
 }
 
 func TestExtractDependencies(t *testing.T) {
-	var log = utils.NewDefaultLogger(utils.INFO)
+	log := utils.NewDefaultLogger(utils.INFO)
 	extractor, err := extractDependencies(filepath.Join("testdata", "packagesproject", "localcache"), log)
 	assert.NoError(t, err)
 

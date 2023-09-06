@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/jfrog/build-info-go/entities"
-	"github.com/jfrog/build-info-go/utils/pythonutils"
+	"github.com/frlute/build-info-go/entities"
+	"github.com/frlute/build-info-go/utils/pythonutils"
 )
 
 type PythonModule struct {

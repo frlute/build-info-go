@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jfrog/build-info-go/utils/compareutils"
+	"github.com/frlute/build-info-go/utils/compareutils"
 	"golang.org/x/exp/maps"
 	"golang.org/x/exp/slices"
 

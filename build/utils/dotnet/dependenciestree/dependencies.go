@@ -2,7 +2,8 @@ package dependenciestree
 
 import (
 	"encoding/json"
-	buildinfo "github.com/jfrog/build-info-go/entities"
+
+	buildinfo "github.com/frlute/build-info-go/entities"
 )
 
 // Dependency tree

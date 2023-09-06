@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/jfrog/build-info-go/utils"
+	"github.com/frlute/build-info-go/utils"
 )
 
 // npm stores cache data in an opaque directory within the configured cache, named _cacache.
