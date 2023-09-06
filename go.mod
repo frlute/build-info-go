@@ -4,8 +4,8 @@ go 1.20
 
 require (
 	github.com/BurntSushi/toml v1.3.2
-	github.com/CycloneDX/cyclonedx-go v0.7.1
 	github.com/buger/jsonparser v1.1.1
+	github.com/frlute/cyclonedx-go v0.0.0-20230906123045-72924cc9691a
 	github.com/jfrog/gofrog v1.3.0
 	github.com/minio/sha256-simd v1.0.1
 	github.com/stretchr/testify v1.8.4

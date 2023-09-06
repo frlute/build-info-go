@@ -9,7 +9,7 @@ import (
 	"os/exec"
 	"strings"
 
-	cdx "github.com/CycloneDX/cyclonedx-go"
+	cdx "github.com/frlute/cyclonedx-go"
 	"github.com/jfrog/build-info-go/build"
 	"github.com/jfrog/build-info-go/utils"
 	"github.com/jfrog/build-info-go/utils/pythonutils"

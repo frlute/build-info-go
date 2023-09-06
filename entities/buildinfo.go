@@ -2,14 +2,15 @@ package entities
 
 import (
 	"errors"
-	"github.com/jfrog/build-info-go/utils/compareutils"
-	"golang.org/x/exp/maps"
-	"golang.org/x/exp/slices"
 	"regexp"
 	"strings"
 	"time"
 
-	cdx "github.com/CycloneDX/cyclonedx-go"
+	"github.com/jfrog/build-info-go/utils/compareutils"
+	"golang.org/x/exp/maps"
+	"golang.org/x/exp/slices"
+
+	cdx "github.com/frlute/cyclonedx-go"
 	"github.com/jfrog/gofrog/stringutils"
 )
 
@@ -509,6 +510,7 @@ func isEqualDependencySlices(actual, other []Dependency) (bool, error) {
 	}
 	return true, nil
 }
+
 func (d *Dependency) UpdateRequestedBy(parentId string, parentRequestedBy [][]string) {
 	// Filter all existing paths from parent
 	var filteredChildRequestedBy [][]string
